@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.9.1.min.js"></script>
+    <script>
+        function mycli(type){
+            var baidu_url = "http://www.baidu.com";
+            var sougou_url = "https://www.sogou.com/";
+            var san_url = "http://www.so.com";
+            var ifm = jQuery("#ifm");
+            if(type==1){
+                ifm.attr("src",baidu_url);
+            }else if(type==2){
+                ifm.attr("src",sougou_url);
+            }else{
+                ifm.attr("src",san_url);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" value="百度" onclick="mycli(1)">
+        <input type="button" value="搜狗" onclick="mycli(2)">
+        <input type="button" value="360" onclick="mycli(3)">
+    </div>
+    <iframe id = 'ifm' style="width: 100%; height: 600px;" src="http://www.baidu.com" frameborder="0"></iframe>
+</body>
+</html>
