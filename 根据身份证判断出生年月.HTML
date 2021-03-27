@@ -1,0 +1,19 @@
+<html>
+       <head>
+             <script type="text/javascript">
+                    var ID=prompt("请输入身份证号")
+             
+                   if(ID.length == 15){
+
+                   alert("19"+ID.substr(6,6) );
+
+                  } else if(ID.length == 18){
+
+                      alert( ID.substr(6,8).replace(/(.{4})(.{2})(.{2})/,"该人是$1年$2月$3日出生") ) ;
+
+               } 
+            </script>
+      </head>
+    <body>
+    </body>
+</html>
