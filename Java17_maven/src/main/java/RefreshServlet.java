@@ -3,20 +3,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 
-public class calc extends HttpServlet {
+public class RefreshServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html");
-        Integer num1 = Integer.parseInt(req.getParameter("number1"));
-        Integer num2 = Integer.parseInt(req.getParameter("number2"));
-        Integer result = num1+num2;
-        resp.getWriter().write("<h1>计算的结果为:"+result+"</h1>");
+        this.doPost(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doGet(req, resp);
+        resp.setCharacterEncoding("utf-8");
+        resp.setContentType("text/html");
+//        resp.setHeader("Refresh","1");
+        resp.setIntHeader("Refresh",1);
+        resp.getWriter().write(String.format("<h1>Date:%s</h1>",new Date()));
     }
 }

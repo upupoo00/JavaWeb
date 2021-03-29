@@ -41,6 +41,7 @@
     <servlet-name>num</servlet-name>
     <url-pattern>/num</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>calc</servlet-name>
     <servlet-class>calc</servlet-class>
@@ -48,6 +49,34 @@
   <servlet-mapping>
     <servlet-name>calc</servlet-name>
     <url-pattern>/calc</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>my</servlet-name>
+    <servlet-class>MyRequestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>my</servlet-name>
+    <url-pattern>/my</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>myref</servlet-name>
+    <servlet-class>RefreshServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myref</servlet-name>
+    <url-pattern>/myref</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>log</servlet-name>
+    <servlet-class>LocalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>log</servlet-name>
+    <url-pattern>/log</url-pattern>
   </servlet-mapping>
 
 </web-app>
