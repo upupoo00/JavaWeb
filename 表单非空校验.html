@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+         td{font-family:宋体;font-size:12px;color:blue;}
+          p{font-family:宋体;font-size:12px;color:blue;}
+       </style>
+       <script type="text/javascript">
+                function check()
+                {
+                       var name=document.getElementById("name").value;
+                       var school=document.getElementById("school").value;
+                       var major=document.getElementById("major").value;
+                       var age=document.getElementById("age").value;
+                       var sex=document.getElementById("sex").value;
+                       var speciality=document.getElementById("speciality").value;
+                       var prize=document.getElementById("prize").value;
+                       if(name=="")//如果用户输入的用户名为空
+                       {
+                              alert("姓名为空");
+                              return false;
+                        }
+                       else
+                       {
+                              if(school=="")
+                              {
+                                     alert("学校为空");
+                                     return false;
+                               }
+                              else
+                              { 
+                                     if(major=="")
+                                    {
+                                         alert("专业为空");
+                                         return false;
+                                     }
+                                     else
+                                     {
+                                           if(age=="")
+                                          {
+                                               alert("年龄为空");
+                                               return false;
+                                          }
+                                           else
+                                          { 
+                                              var temp=age;
+                                              if(temp<20)
+                                                 {
+                                                    alert("年龄小于20");
+                                                    return false;
+                                                  }
+                                                  else
+                                                  {
+                                                    if(sex=="")
+                                                    {
+                                                      alert("性别为空");
+                                                       return false;
+                                                    }
+                                                    else
+                                                   { 
+                                                       if(speciality=="")
+                                                      {
+                                                          alert("特长为空");
+                                                          return false;
+                                                       }
+                                                       else
+                                                      { 
+                                                          if(prize=="")
+                                                         {
+                                                           alert("获奖信息为空");
+                                                           return false;
+                                                         }
+                                                      }
+                                                    }
+                                                  }
+                                          }
+                                     }
+                             }
+
+                       }
+              }
+           </script>
+    </head>
+    <body>
+         <form name="forml" onsubmit="return check()">
+          <h1 align="center"><p>个人简历</p></h1>
+                 <table border="2" align="center" width="80%" >
+                 <tr>
+                     <td width="30%" align="right" >姓&nbsp;&nbsp;名</td>
+                     <td width="70%   align="left"><input type="text" id="name"></td>
+                 </tr>
+                 <tr>
+                     <td width="30%" align="right">毕业院校</td>
+                     <td width="70%   align="left"><input type="text" id="school"></td>
+                 </tr>
+                 <tr>
+                     <td width="30%" align="right">专&nbsp;&nbsp;业</td>
+                     <td width="70%   align="left"><input type="text" id="major"></td>
+                 </tr>
+                 <tr>
+                     <td width="30%" align="right">年&nbsp;&nbsp;龄</td>
+                     <td width="70%   align="left"><input type="text" id="age"></td>
+                 </tr>
+                 <tr>
+                     <td width="30%" align="right">性&nbsp;&nbsp;别</td>
+                     <td width="70%   align="left"><input type="text" id="sex"></td>
+                 </tr>
+                  <tr>
+                     <td width="30%" align="right">特&nbsp;&nbsp;长</td>
+                     <td width="70%   align="left"><input type="text" id="speciality"></td>
+                 </tr>
+                  <tr>
+                     <td width="30%" align="right">获奖信息</td>
+                     <td width="70%   align="left"><input type="text" id="prize"></td>
+                 </tr>
+                 </table>
+                 <center>
+                    <input type="submit"    value="提交">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="reset"     value="重置">
+                    &nbsp;&nbsp;
+                 </center>
+            </form>
+    </body>
+</html>
