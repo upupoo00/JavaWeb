@@ -21,7 +21,7 @@ public class LocalServlet extends HttpServlet {
                 name.equals("root") && pwd.equals("root")){
             resp.setStatus(301);
 //            resp.setHeader("location","http//www.baidu.com");
-            resp.sendRedirect("http//www.baidu.com");
+            resp.sendRedirect("https://www.baidu.com");
         }else {
             resp.getWriter().write("<h1>输入的用户名或密码错误!!!</h1>");
         }

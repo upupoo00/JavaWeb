@@ -78,5 +78,41 @@
     <servlet-name>log</servlet-name>
     <url-pattern>/log</url-pattern>
   </servlet-mapping>
+<!--setcookie接口-->
+  <servlet>
+    <servlet-name>setcookie</servlet-name>
+    <servlet-class>SetCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>setcookie</servlet-name>
+    <url-pattern>/setcookie</url-pattern>
+  </servlet-mapping>
+<!--getcookie-->
+  <servlet>
+    <servlet-name>getcookie</servlet-name>
+    <servlet-class>GetCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getcookie</servlet-name>
+    <url-pattern>/getcookie</url-pattern>
+  </servlet-mapping>
 
+  <servlet>
+    <servlet-name>mysession</servlet-name>
+    <servlet-class>MySessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mysession</servlet-name>
+    <url-pattern>/mysession</url-pattern>
+  </servlet-mapping>
+
+<!--  文件上传-->
+  <servlet>
+    <servlet-name>upload</servlet-name>
+    <servlet-class>UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>upload</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
 </web-app>
