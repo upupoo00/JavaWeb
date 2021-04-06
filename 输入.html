@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .span{
+            font-size: 20px;
+            margin-top: 128px;
+            /* margin-left: 700px; */
+            text-align: center;
+        }
+        .innerdiv{
+            /* margin-left: 650px; */
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+    <script language="javascript"> 
+        function checkPhone(type){
+            if(type==1){
+            var mobileNo = document.getElementById("mobileNo");
+            var regExpression = /^(86)?((13\d{9})|(15[0,1,2,3,5,6,7,8,9]\d{8})|(18[0,5,6,7,8,9]\d{8}))$/;
+            if(!regExpression.test(mobileNo.value)){    
+                alert("您输入的手机号码有误！");
+                mobileNo.focus();                       
+                return;                             
+            }else{
+                alert("手机号码正确");
+            }
+        }
+        if(type==2){
+            var studentNo = document.getElementById("studentNo");
+            if(studentNo.value != null){
+                alert("学号正确");
+            }else{
+                alert("学号输入有误");
+            }
+        }
+    }
+
+        </script>
+</head>
+
+<body>
+    <div class="span">
+        手机号码:<input type="text" id="mobileNo">
+        <input  type="button" onclick="checkPhone(1)" value="检查">
+        <p></p>
+        学&nbsp&nbsp&nbsp&nbsp&nbsp号:<input id="studentNo" type="number" >
+        <input type="button" onclick="checkPhone(2)" value="检查">
+    </div> 
+</body>
+
+</html>
