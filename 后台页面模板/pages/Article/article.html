@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文章选项</title>
+    <!-- 告诉浏览器屏幕自适应 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css">
+    <!-- 主题样式 -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.css">
+    <!-- 离线 Google 字体: Source Sans Pro -->
+    <link href="/AdminLTE/AdminLTE-3.x/dist/css/google.css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/dist/js/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <style>
+        .btn .nav-link {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 1.5rem;
+            color: #fff !important;
+            font-weight: bold;
+        }
+                    .button2{
+                height: 30px;
+                width: 40px;
+                background-color:cornflowerblue;
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 15px;
+                cursor: pointer;
+                box-shadow: 0 2px #aaa;
+                border-radius: 5px;
+                outline: none;
+                position: relative;
+                font-size: 13px;
+            }
+            .button2:hover{
+                background-color: darkblue;
+            }
+            .button2:active{
+                background-color: darkblue;
+                box-shadow: 0 3px #aaa;
+                transform: translateY(4px);
+            }
+            .button3{
+                    height: 30px;
+                    width: 40px;
+                    background-color:rgb(255, 17, 0);
+                    border: none;
+                    color: white;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 15px;
+                    cursor: pointer;
+                    box-shadow: 0 2px #aaa;
+                    border-radius: 5px;
+                    outline: none;
+                    position: relative;
+                    font-size: 13px;
+                }
+                .button3:hover{
+                    background-color: rgb(173, 51, 14);
+                }
+                .button3:active{
+                    background-color: darkblue;
+                    box-shadow: 0 3px #aaa;
+                    transform: translateY(4px);
+                }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- 导航栏 -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- 左侧导航栏链接 -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <button type="button" class="btn btn-block bg-gradient-danger"><a href="editor.html" class="nav-link">创建文章</a></button>
+
+            </ul>
+
+            <!-- 搜索表单 -->
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="搜索" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- 右侧导航栏链接 -->
+            <ul class="navbar-nav ml-auto">
+                <!-- 通知下拉菜单 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">15</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">15 条通知</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 4 条新消息
+                            <span class="float-right text-muted text-sm">3 分钟前</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-users mr-2"></i> 8 个好友请求
+                            <span class="float-right text-muted text-sm">12 小时前</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> 3 个新报告
+                            <span class="float-right text-muted text-sm">2 天前</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">查看所有通知</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-block btn-warning"><a href="#" class="nav-link">退出</a></button>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- /.navbar -->
+
+        <!-- 主侧边栏容器 -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- 品牌 Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Administrator</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- 侧边栏用户面板（可选） -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="info">
+                        <a href="#" class="d-block">用户1</a>
+                    </div>
+                </div>
+
+                <!-- 侧边栏菜单 -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- 使用 .nav-icon 类添加图标，
+               或使用 font-awesome 或其他任何图标字体库 -->
+                        <li class="nav-item has-treeview">
+                            <a href="../../index.html" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    首页
+                                </p>
+                            </a>
+                        </li>
+                        <!-- 栏目管理 -->
+                        <li class="nav-item has-treeview">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    栏目管理
+                                    <i class="fas fa-angle-left right"></i>
+                                    <!-- <span class="right badge badge-danger">新</span> -->
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目1</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目3</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目4</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目5</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目6</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目7</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="./article.html" class="nav-link  active">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    文章选项
+                                    <!-- <i class="fas fa-angle-left right"></i> -->
+                                    <!-- <span class="badge badge-info right">6</span> -->
+                                </p>
+                            </a>
+
+                        </li>
+                        <!-- 资源管理 -->
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tree"></i>
+                                <p>
+                                    资源管理
+                                    <!-- <i class="fas fa-angle-left right"></i> -->
+                                </p>
+                            </a>
+                        </li>
+                        <!-- 管理员 -->
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    管理员
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. 包含页面内容 -->
+        <div class="content-wrapper">
+
+            <!-- 主体内容 -->
+            <section class="content">
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1 class="m-0 text-dark">文章列表</h1>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item"><a href="../../index.html">首页</a></li>
+                                    <li class="breadcrumb-item active">文章选项</li>
+                                </ol>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <div class="container-fluid">
+                    <!-- Main row -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <!-- <div class="card-header">
+                                    <h3 class="card-title">固定表头表格</h3>
+
+                                    <div class="card-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control float-right" placeholder="搜索">
+
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- /.card-header -->
+                                <div class="card-body table-responsive p-0" style="height: 520px;">
+                                    <table class="table table-head-fixed text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>编号</th>
+                                                <th>作者</th>
+                                                <th>发布时间</th>
+                                                <th>栏目</th>
+                                                <th>标题</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>183</td>
+                                                <td>John Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-success">批准</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                                <td>
+                                                    <a href="#" ><input type="button" class="button2" value="编辑"
+                                                        class="btn btn-primary btn-lg" 
+                                                        data-toggle="modal" 
+                                                        data-target="#myModalFile"></a>
+
+
+                                                <!-- 文档模态框（Modal） -->
+   
+                                                            <div class="modal fade" id="myModalFile" tabindex="-1" role="dialog" 
+                                                            aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                            <div class="modal-content" style="width: 40rem;">
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title" id="myModalLabel" style="position: relative;margin-left: 16rem;" >
+                                                                        修改文章           </h4>
+                                                                </div>
+                                                                <div class="modal-body" >
+                                                                    <form class="form-horizontal" action="" role="form">
+                                                                                <div class="form-group" >
+                                                                                    <label for="firstname" class="col-sm-2 control-label">编号</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="text" class="form-control" id="firstname"
+                                                                                            placeholder="" readonly name="emp_id" value="">
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-group" >
+                                                                                    <label for="lastname" class="col-sm-2 control-label" >文章标题</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="text" class="form-control" id="lastname"
+                                                                                            placeholder="" name="emp_level" value="" >
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-group" >
+                                                                                    <label for="lastname" class="col-sm-2 control-label" >发布时间</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="date" class="form-control" id="lastname"
+                                                                                            placeholder="" name="emp_level" value="" >
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="form-group" >
+                                                                                    <label for="lastname" class="col-sm-2 control-label" >修改时间</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="date" class="form-control" id="lastname"
+                                                                                            placeholder="" name="emp_level" value="" >
+                                                                                    </div>
+                                                                                </div>
+                                                                                
+                                                                                <div class="form-group" >
+                                                                                    <label for="lastname" class="col-sm-2 control-label">栏目</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <!-- <input type="" class="form-control" id="lastname"
+                                                                                            placeholder="" name="emp_level" value="" > -->
+                                                                                    
+                                                                                    <select class="form-control" id="lastname">
+                                                                                        <option>栏目</option>
+                                                                                        <option>栏目1</option>
+                                                                                        <option>栏目2</option>
+                                                                                        <option>栏目3</option>
+                                                                                        <option>栏目4</option>
+                                                                                        <option>栏目5</option>
+                                                                                        <option>栏目6</option>
+                                                                                        <option>栏目7</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                </div>
+
+                                                                                <div class="form-group" ">
+                                                                                    <label for="lastname" class="col-sm-2 control-label" >撰写人</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="text" class="form-control" id="lastname"
+                                                                                            placeholder="" name="emp_level" value="" >
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                                <div class="form-group" >
+                                                                                    <label for="lastname" class="col-sm-2 control-label" >权重</label>
+                                                                                    <div class="col-sm-10">
+                                                                                        <input type="text" class="form-control" id="lastname"
+                                                                                            placeholder="" name="emp_level" value="" >
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                
+
+                                                                    </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default" data-dismiss="modal" >关闭</button>
+                                                                    <button type="submit" class="btn btn-primary">提交更改</button>
+                                                                </div>
+                                                            </div><!-- /.modal-content -->
+                                                            </div><!-- /.modal-dialog --></div> 
+                                                            <!-- /.modal-->
+                                                 <!--文档模态框结束-->
+
+                                                 <a href="#"><input type="button" class="button3" value="删除"></a>
+                                                
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>219</td>
+                                                <td>Alexander Pierce</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-warning">等待</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>657</td>
+                                                <td>Bob Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-primary">批准</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                            </tr>
+                                            <tr>
+                                                <td>175</td>
+                                                <td>Mike Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-danger">拒绝</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                            </tr>
+                                            <tr>
+                                                <td>134</td>
+                                                <td>Jim Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-success">批准</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                            </tr>
+                                            <tr>
+                                                <td>494</td>
+                                                <td>Victoria Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-warning">等待</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                            </tr>
+                                            <tr>
+                                                <td>832</td>
+                                                <td>Michael Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-primary">批准</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                            </tr>
+                                            <tr>
+                                                <td>982</td>
+                                                <td>Rocky Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-danger">拒绝</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                            </tr>
+                                            <tr>
+                                                <td>982</td>
+                                                <td>Rocky Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-danger">拒绝</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                            </tr>
+                                            <tr>
+                                                <td>982</td>
+                                                <td>Rocky Doe</td>
+                                                <td>11-7-2014</td>
+                                                <td><span class="tag tag-danger">拒绝</span></td>
+                                                <td>培根，意大利熏肉，意大利腊肠，鹿肉，鸡肉，肥肉。</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    </div>
+                    <!-- /.row (main row) -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2014-2019 <a href="#">AdminLTE.io</a>.</strong> 保留所有权利。
+            <div class="float-right d-none d-sm-inline-block">
+                <b>版本</b> 3.0.4
+            </div>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- 控制侧边栏内容在这里 -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- 解决使用 Bootstrap 提示工具与 jQuery UI 提示工具冲突 -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="../../plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../../plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../../plugins/moment/moment.min.js"></script>
+    <script src="../../plugins/moment/locale/zh-cn.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.js"></script>
+    <!-- AdminLTE 仪表盘演示（仅用于演示） -->
+    <!-- <script src="dist/js/pages/dashboard.js"></script> -->
+    <!-- 用于演示 AdminLTE  -->
+    <!-- <script src="dist/js/demo.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文章编辑</title>
+    <!-- 告诉浏览器屏幕自适应 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css">
+    <!-- 主题样式 -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.css">
+    <!-- 离线 Google 字体: Source Sans Pro -->
+    <link href="/AdminLTE/AdminLTE-3.x/dist/css/google.css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <style>
+        .btn .nav-link {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 1.5rem;
+            color: #fff !important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- 导航栏 -->
+
+        <!-- /.navbar -->
+
+        <!-- 主侧边栏容器 -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- 品牌 Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Administrator</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- 侧边栏用户面板（可选） -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="info">
+                        <a href="#" class="d-block">用户1</a>
+                    </div>
+                </div>
+
+                <!-- 侧边栏菜单 -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- 使用 .nav-icon 类添加图标，
+               或使用 font-awesome 或其他任何图标字体库 -->
+                        <!-- 首页 -->
+                        <li class="nav-item has-treeview">
+                            <a href="../../index.html" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    首页
+                                </p>
+                            </a>
+                        </li>
+                        <!-- 栏目管理 -->
+                        <li class="nav-item has-treeview">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    栏目管理
+                                    <i class="fas fa-angle-left right"></i>
+                                    <!-- <span class="right badge badge-danger">新</span> -->
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目1</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目3</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目4</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目5</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目6</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="##" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>栏目7</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 文章选项 -->
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link  active">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    文章选项
+                                    <!-- <i class="fas fa-angle-left right"></i> -->
+                                    <!-- <span class="badge badge-info right">6</span> -->
+                                </p>
+                            </a>
+
+                        </li>
+                        <!-- 资源管理 -->
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tree"></i>
+                                <p>
+                                    资源管理
+                                    <!-- <i class="fas fa-angle-left right"></i> -->
+                                </p>
+                            </a>
+                        </li>
+                        <!-- 管理员 -->
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    管理员
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. 包含页面内容 -->
+        <div class="content-wrapper">
+
+
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>文章编辑</h1>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" onclick="show_modal()" class="btn btn-success" data-toggle="modal" data-target="#modal-default">
+                                发布文章
+                            </button>
+                            <button type="button" class="btn btn-danger" onclick="clean_content()">
+                                清空文章
+                            </button>
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="../../index.html">首页</a></li>
+                                <li class="breadcrumb-item"><a href="article.html">文章选项</a></li>
+                                <li class="breadcrumb-item active">文章编辑</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- 主体内容 -->
+            <section class="content">
+
+                <!-- Default box -->
+                <div class="card">
+                    <!-- <div class="card-header">
+                        <h3 class="card-title">标题</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="折叠">
+                        <i class="fas fa-minus"></i></button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="移除">
+                        <i class="fas fa-times"></i></button>
+                        </div>
+                    </div> -->
+                    <div class="card-body">
+                        <form action="" method="POST" name="">
+                            <div id="editor"></div>
+<!--                            <textarea name="content" id="content" cols="30" rows="10" style="display: none;"></textarea>-->
+                            <!-- <input class="upload" type="submit" value="提交" data-toggle="modal" data-target="#myModal"> -->
+                            <!-- <button class="upload btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">提交</button> -->
+                            <!-- <input type="button" value="显示：弹" onclick="alert(editor.txt.html())"> -->
+                        </form>
+                    </div>
+                    <!-- /.card-body -->
+                    <!-- <div class="card-footer">
+                        底部
+                    </div> -->
+                    <!-- /.card-footer-->
+                </div>
+                <!-- /.card -->
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- <footer class="main-footer">
+            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> 保留所有权利。
+            <div class="float-right d-none d-sm-inline-block">
+                <b>版本</b> 3.0.4
+            </div>
+        </footer> -->
+
+        <!-- 模态框 -->
+        <div class="modal fade" id="modal-default" style="z-index: 10002;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">发布文章</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" action="../../ArticleIO?method=uploadArticle" method="POST" name="article">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label for="title" class="col-sm-2 col-form-label">标题</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="title" id="title" class="form-control" placeholder="文章标题">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="author" class="col-sm-2 col-form-label">作者</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="author" id="author" class="form-control" placeholder="作者">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="audit" class="col-sm-2 col-form-label">审核</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="audit" id="audit" class="form-control" placeholder="审核人">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>所属栏目</label>
+                                    <select class="form-control" name="column" id="column">
+                                        <option>栏目</option>
+                                      <option>选项 1</option>
+                                      <option>选项 2</option>
+                                      <option>选项 3</option>
+                                      <option>选项 4</option>
+                                      <option>选项 5</option>
+                                    </select>
+                                </div>
+                                <textarea name="content" id="content" cols="30" rows="10" style="display: none;"></textarea>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-info">发布文章</button>
+                                <button type="submit" class="btn btn-default float-right" data-dismiss="modal">取消</button>
+                            </div>
+                            <!-- /.card-footer -->
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /模态框 -->
+
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- 控制侧边栏内容在这里 -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- 解决使用 Bootstrap 提示工具与 jQuery UI 提示工具冲突 -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="../../plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../../plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../../plugins/moment/moment.min.js"></script>
+    <script src="../../plugins/moment/locale/zh-cn.js"></script>
+    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.js"></script>
+    <!-- AdminLTE 仪表盘演示（仅用于演示） -->
+    <!-- <script src="dist/js/pages/dashboard.js"></script> -->
+    <!-- 用于演示 AdminLTE  -->
+    <script src="../../dist/js/demo.js"></script>
+
+    <script type="text/javascript" src="../../wangEditorPackage/dist/wangEditor.min.js"></script>
+    <script type="text/javascript">
+        const text = ''; // 设置编辑区域内容
+        const E = window.wangEditor;
+        const editor = new E('#editor');
+        const $html = $('#content');
+
+        //设置编辑区域高度为50px
+        editor.config.height = 550
+
+        // 禁用待办事项、视频按钮
+        editor.config.excludeMenus = [
+            'todo', //代办事项
+            'video' //视频
+        ]
+
+        // placeholder提示为空
+        editor.config.placeholder = ''
+
+        // 更改内容后同步至textarea中
+        editor.config.onchange = function(newHtml) {
+            $html.val(newHtml)
+        }
+
+        //上传图片服务器接口地址(不可与Base64同时使用)
+        //editor.config.uploadImgServer = '';
+
+        // 禁止过滤复制文本的样式
+        editor.config.pasteFilterStyle = false;
+        // 以Base64方式上传图片
+        editor.config.uploadImgShowBase64 = true;
+        // 上传图片大小限制(2.5Mb)
+        editor.config.uploadImgMaxSize = 2.5 * 1024 * 1024
+            // 禁用网络图片
+        editor.config.showLinkImg = false
+        editor.create();
+
+        editor.txt.html(text);
+
+        //模态框控制
+        function show_modal() {
+            $('#myModal').modal('show');
+        }
+
+        //文章内容清空
+        function clean_content() {
+            editor.txt.html('');
+            $html.val('')
+        }
+    </script>
+</body>
+
+</html>
